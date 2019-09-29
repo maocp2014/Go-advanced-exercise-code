@@ -37,7 +37,7 @@ func saveGame() {
 }
 
 func onReq(r *Request) {
-	pos := r.Data.(UserPos)
+	pos := r.Data.(UserPos) // assert
 	fmt.Println(r.CmdID, pos)
 }
 
