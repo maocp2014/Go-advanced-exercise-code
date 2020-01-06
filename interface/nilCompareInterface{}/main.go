@@ -30,9 +30,9 @@ func testnil5(a interface{}) bool {
 
 func main() {
 	var a *State
-	fmt.Println(testnil1(a, nil))
-	fmt.Println(testnil2(a, nil))
-	fmt.Println(testnil3(a))
-	fmt.Println(testnil4(a))
-	fmt.Println(testnil5(a))
+	fmt.Println(testnil1(a, nil)) // false
+	fmt.Println(testnil2(a, nil)) // false
+	fmt.Println(testnil3(a))      // false
+	fmt.Println(testnil4(a))      // true
+	fmt.Println(testnil5(a))      // true
 }
