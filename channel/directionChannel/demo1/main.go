@@ -39,7 +39,7 @@ func counter(out chan<- int) {
     defer close(out)
 
     for i := 0; i < 5; i++ {
-        out <- i //如果对方不读 会阻塞
+        out <- i // 如果对方不读 会阻塞
     }
 }
 
@@ -53,8 +53,8 @@ func printer(in <-chan int) {
 func main() {
     c := make(chan int) //   chan   //读写
 
-    go counter(c) //生产者
-    printer(c)    //消费者
+    go counter(c) // 生产者
+    printer(c)    // 消费者
 
     fmt.Println("done")
 }

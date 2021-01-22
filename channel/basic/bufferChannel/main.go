@@ -17,9 +17,18 @@ func main() {
 	go squares(c)
 
 	c <- 1
+	a := cap(c)
+	b := len(c)
 	c <- 2
 	c <- 3
 	c <- 4 // block
+
+
+
+	fmt.Println("channel c's capacity: ", a)
+	fmt.Println("channel c's length: ", b)
+
+
 
 	fmt.Println("main() stopped")
 }

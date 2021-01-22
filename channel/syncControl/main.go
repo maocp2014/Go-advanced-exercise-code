@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-//同步控制模型，生产者模型
+// 同步控制模型，生产者模型
 var lockChan = make(chan int, 1)
 var remainMoney = 1000
 
