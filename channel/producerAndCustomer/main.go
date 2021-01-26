@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 // 生产者
@@ -11,7 +10,7 @@ func producer(ch chan int, quit chan bool, v int) {
 		v = v + 1
 		ch <- v
 		fmt.Println("write finish, v: ", v)
-		time.Sleep(time.Second)
+		// time.Sleep(time.Second)
 	}
 	// 生产者退出
 	quit <- true
