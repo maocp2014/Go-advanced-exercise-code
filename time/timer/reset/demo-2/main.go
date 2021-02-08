@@ -17,8 +17,11 @@ func main() {
 			fmt.Println("timer", time.Now().Format("2006-01-02 15:04:05"))
 
 			count++
+
 			fmt.Println("调用 Reset() 重新设置过期时间，将时间修改为 2s")
+
 			timer1.Reset(2*time.Second)
+
 			if count > 2 {
 				fmt.Println("调用 Stop() 停止定时器")
 				timer1.Stop()
